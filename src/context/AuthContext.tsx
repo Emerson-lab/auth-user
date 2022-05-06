@@ -29,7 +29,7 @@ type AuthContexData = {
 export const AuthContext = createContext({} as AuthContexData)
 
 export function AuthProvider({ children }: AuthProviderProps) {
-  const [user, setUser] = useState<User | null>();
+  const [user, setUser] = useState<User | any>();
   const isAuthenticated = !!user;
 
   useEffect(() => {
